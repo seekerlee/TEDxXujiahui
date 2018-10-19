@@ -1,7 +1,9 @@
 const path = require('path');
+const glob = require('glob-all')
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const PurifyCSSPlugin = require('purifycss-webpack');
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
 
@@ -32,6 +34,24 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'index.ejs'),
             title: appHtmlTitle
+        }),
+        
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        }),
+
+        new PurifyCSSPlugin({
+            paths: glob.sync([
+                path.join(__dirname, 'app/*.js'),
+                path.join(__dirname, 'index.ejs')
+            ]),
+            minimize: true,
+            purifyOptions: {
+                whitelist: []
+            }
         })
     ],
     module: {
@@ -64,7 +84,11 @@ module.exports = {
             {
                 test: /\.(sass|scss)$/,
                 use: [
-                    'style-loader', // Adds CSS to the DOM by injecting a <style> tag
+                    {
+                        // extracts CSS into separate files. It creates a CSS file per JS file which contains CSS.
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    //'style-loader', // Adds CSS to the DOM by injecting a <style> tag
                     {
                         loader: 'css-loader', // The css-loader interprets @import and url() like import/require() and will resolve them.
                         options: {
