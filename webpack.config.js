@@ -10,7 +10,7 @@ const IS_DEV = (process.env.NODE_ENV === 'dev');
 const dirApp = path.join(__dirname, 'app');
 const dirAssets = path.join(__dirname, 'assets');
 
-const appHtmlTitle = 'TEDxXujiahui';
+const appHtmlTitle = 'TEDxXujiahui | 汇聚万智，和而不同';
 
 /**
  * Webpack Configuration
