@@ -1,16 +1,18 @@
-const path = require('path');
+const path = require('path')
 const glob = require('glob-all')
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const PurifyCSSPlugin = require('purifycss-webpack');
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const PurifyCSSPlugin = require('purifycss-webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 // Is the current build a development build
-const IS_DEV = (process.env.NODE_ENV === 'dev');
+const IS_DEV = (process.env.NODE_ENV === 'dev')
 
-const dirApp = path.join(__dirname, 'app');
-const dirAssets = path.join(__dirname, 'assets');
+const dirApp = path.join(__dirname, 'app')
+const dirAssets = path.join(__dirname, 'assets')
+const dirDist = path.join(__dirname, 'dist')
 
-const appHtmlTitle = 'TEDxXujiahui | 汇聚万智，和而不同';
+const appHtmlTitle = 'TEDxXujiahui | 汇聚万智，和而不同'
 
 /**
  * Webpack Configuration
@@ -30,7 +32,11 @@ module.exports = {
         new webpack.DefinePlugin({
             IS_DEV: IS_DEV
         }),
-
+        new CopyWebpackPlugin([{
+             from: 'assets/images/*',
+             to: dirDist,// path.join(dirDist, '/assets/images'),
+             toType: 'dir'
+        }]),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'index.ejs'),
             title: appHtmlTitle
@@ -115,4 +121,4 @@ module.exports = {
             }
         ]
     }
-};
+}
