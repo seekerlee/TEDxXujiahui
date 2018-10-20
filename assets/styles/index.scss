@@ -1,32 +1,98 @@
-// Apply a natural box layout model to all elements
-// but allowing components to change
-// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 html {
     box-sizing: border-box;
+    overflow: hidden;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
+h1 {
+    font-size: 2rem;
+}
+@keyframes fadein-jue {
+    from {
+        transform: scale(1.1) translate(0, -3rem);
+        opacity:0;
+    }
+    to {
+        transform: scale(1) translate(0, -3rem);
+        opacity:1;
+    }
+}
 .home {
+    a {
+        color: #fff;
+    }
+    a:hover {
+        border-bottom-color: #ff2b06;
+        color: #ff2b06;
+    }
+    .tabs li.is-active a {
+        border-bottom-color: #ff2b06;
+        color: #ff2b06;
+    }
+    color: white;
+    h1 {
+        text-shadow: 3px 5px 2px #000;
+    }
+    .desc {
+        text-shadow: 3px 5px 2px #000;
+    }
     .hero-body {
         background-image: url('../images/jue-bg.png');
         background-repeat: repeat-y;
         // background-size: auto 100%;
         background-position-x: center;
+        h1.title {
+            color: white;
+            font-size: 2rem;
+        }
         .jue {
             margin: 0 auto;
             height: auto;
             max-width: 425px;
+            transform: translate(0, -3rem);
+            filter: drop-shadow(5px 5px 5px #222) hue-rotate(90deg);
+            animation: fadein-jue 2s;
+        }
+        a.join, a.follow {
+            font-size: 2rem;
+            text-shadow: 3px 5px 2px #000;
+        }
+        .qr {
+            position: absolute;
+            left: 50%;
+            transform: translate(-64px, 1rem);
+        }
+        a.follow ~ figure {
+            display: none;
+        }
+        a.follow:hover ~ figure {
+            display: block;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .hero-body {
+            background-repeat: repeat;
         }
     }
     .navs {
         position: absolute;
         bottom: 2rem;
+        padding: 0 1.5rem;
+        .logo {
+            max-width: 257px;
+            margin-left: 1rem;
+        }
+        .tabs ul li a{
+            
+        }
     }
     .wall {
         display: block;
         position: absolute;
         bottom: 0;
+        filter: drop-shadow(0 -5px 5px #222);
+        transition: all ease 8s;
     }
     .wall1 {
         z-index: -2;
@@ -38,11 +104,11 @@ html {
     }
     .wall3 {
         z-index: -1;
-        left: 50%;
+        right: 15%;
     }
     .wall4 {
         z-index: -2;
-        left: 75%;
+        right: -100px;
         bottom: -90px;
     }
 }
