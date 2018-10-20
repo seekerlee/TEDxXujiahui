@@ -34,7 +34,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([{
              from: 'assets/images/*',
-             to: dirDist,// path.join(dirDist, '/assets/images'),
+             to: dirDist,
              toType: 'dir'
         }]),
         new HtmlWebpackPlugin({
@@ -118,6 +118,17 @@ module.exports = {
                 options: {
                     name: '[path][name].[ext]'
                 }
+            },
+            {
+                test: /\.(svg|eot|woff|ttf|svg|woff2)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: "fonts/[name].[ext]"
+                        }
+                    }
+                ]
             }
         ]
     }

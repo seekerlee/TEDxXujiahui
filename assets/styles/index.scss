@@ -42,49 +42,47 @@ h1 {
         background-repeat: repeat-y;
         // background-size: auto 100%;
         background-position-x: center;
+        z-index: 10;
         h1.title {
             color: white;
             font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: .5rem;
+            .conf-name {
+                display: inline-block;
+            }
         }
         .jue {
             margin: 0 auto;
             height: auto;
             max-width: 425px;
             transform: translate(0, -3rem);
-            filter: drop-shadow(5px 5px 5px #222) hue-rotate(90deg);
+            filter: drop-shadow(5px 5px 5px #222);
             animation: fadein-jue 2s;
         }
         a.join, a.follow {
-            font-size: 2rem;
             text-shadow: 3px 5px 2px #000;
         }
         .qr {
-            position: absolute;
             left: 50%;
             transform: translate(-64px, 1rem);
         }
-        a.follow ~ figure {
-            display: none;
+        a.follow ~ figure img{
+            transition: all linear 0.2s;
+            opacity: 0;
         }
-        a.follow:hover ~ figure {
-            display: block;
-        }
-    }
-    @media screen and (max-width: 768px) {
-        .hero-body {
-            background-repeat: repeat;
+        a.follow:hover ~ figure img{
+            opacity: 1;
         }
     }
     .navs {
         position: absolute;
         bottom: 2rem;
         padding: 0 1.5rem;
+        z-index: 10;
         .logo {
             max-width: 257px;
             margin-left: 1rem;
-        }
-        .tabs ul li a{
-            
         }
     }
     .wall {
@@ -92,23 +90,67 @@ h1 {
         position: absolute;
         bottom: 0;
         filter: drop-shadow(0 -5px 5px #222);
-        transition: all ease 8s;
+        transition: all ease 9s;
     }
     .wall1 {
-        z-index: -2;
+        z-index: 1;
         left: 0;
     }
     .wall2 {
-        z-index: -1;
+        z-index: 2;
         left: 15%;
     }
     .wall3 {
-        z-index: -1;
+        z-index: 2;
         right: 15%;
     }
     .wall4 {
-        z-index: -2;
+        z-index: 1;
         right: -100px;
-        bottom: -90px;
+        bottom: -100px;
+    }
+}
+.home:after {
+    background-image: url('../images/gray-sand.png');
+    background-repeat: repeat;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+@media screen and (max-width: 768px) {
+    .home {
+        .navs {
+            width: 100%;
+            .logo {
+                margin: 0 auto;
+                max-width: 129px;
+            }
+        }
+        .hero-body:after {
+            background-color: rgba(0,0,0,.3);
+            bottom: 0;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .hero-body {
+            .jue {
+                max-width: 210px;
+            }
+            h1.title {
+                font-size: 1.5rem;
+            }
+            > .container {
+                z-index: 1;
+            }
+        }
+    }
+    .home:after {
+        top: 0;
     }
 }

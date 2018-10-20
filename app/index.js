@@ -5,6 +5,7 @@
 // Load application styles
 import 'bulma'
 import 'animate.css'
+import '@mdi/font/css/materialdesignicons.css'
 import 'styles/index.scss'
 // ================================
 // START YOUR APP HERE
@@ -39,6 +40,10 @@ if(!isMobile) {
     setTimeout(wallMove)
     setInterval(wallMove, 10000)
 }
+
+document.querySelector('a.follow').addEventListener('click', ()=>{
+    document.querySelector('a.follow ~ figure img').style['opacity'] = 1
+})
 
 document.querySelectorAll('.navs .tabs ul li a').forEach((link) => {
     link.addEventListener('click', () => {
