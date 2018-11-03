@@ -116,7 +116,8 @@ module.exports = {
                 test: /\.(jpe?g|png|gif)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[path][name].[ext]'
+                    name: '[path][name].[ext]',
+                    publicPath: IS_DEV ? '' : 'https://static.tedxxujiahui.com'
                 }
             },
             {

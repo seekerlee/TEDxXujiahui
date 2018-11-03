@@ -7,6 +7,10 @@ import 'bulma'
 import 'animate.css'
 import '@mdi/font/css/materialdesignicons.css'
 import 'styles/index.scss'
+import wall1Src from '../assets/images/wall1.png'
+import wall2Src from '../assets/images/wall2.png'
+import wall3Src from '../assets/images/wall3.png'
+import wall4Src from '../assets/images/wall4.png'
 // ================================
 // START YOUR APP HERE
 // ================================
@@ -24,10 +28,10 @@ if(!isMobile) {
     wall2.classList.add("wall", "wall2", "is-hidden-mobile")
     wall3.classList.add("wall", "wall3", "is-hidden-mobile")
     wall4.classList.add("wall", "wall4", "is-hidden-mobile")
-    wall1.setAttribute('src', 'assets/images/wall1.png')
-    wall2.setAttribute('src', 'assets/images/wall2.png')
-    wall3.setAttribute('src', 'assets/images/wall3.png')
-    wall4.setAttribute('src', 'assets/images/wall4.png')
+    wall1.setAttribute('src', wall1Src)
+    wall2.setAttribute('src', wall2Src)
+    wall3.setAttribute('src', wall3Src)
+    wall4.setAttribute('src', wall4Src)
     const wallParent = document.querySelector('.home > section')
     walls.forEach(w => wallParent.appendChild(w))
 
