@@ -10,12 +10,13 @@
                 <span></span>
             </span>
         </div>
+        
         <div ref="menus" class="navbar-menu" id="navMenu">
             <div class="navbar-end">
                 <a class="navbar-item" href="/">大会</a>
-                <a class="navbar-item" href="/team">团队</a>
-                <a class="navbar-item" href="/join">参与</a>
-                <a class="navbar-item" href="/about">关于</a>
+                <a class="navbar-item <%= active === 'team' ? 'is-active' : '' %>" href="/team">团队</a>
+                <a class="navbar-item <%= active === 'join' ? 'is-active' : '' %>" href="/join" >参与</a>
+                <a class="navbar-item <%= active === 'about' ? 'is-active' : '' %>" href="/about">关于</a>
             </div>
         </div>
     </div>

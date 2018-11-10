@@ -6,7 +6,7 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body class="about">
-    <%= require('ejs-loader!../components/nav.ejs')() %>
+    <%= require('ejs-loader!../components/nav.ejs')({active: 'about'}) %>
     <section class="about-xjh-2018">
         <div class="container">
             <h1 class="has-text-weight-bold">About<br><span class="tedx">TED<sup>x</sup></span><span class="has-text-weight-normal">Xujiahui</span><br>2018</h1>

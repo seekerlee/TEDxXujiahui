@@ -5,11 +5,23 @@ $link-hover: rgba(230, 43, 31, 0.75);
 $link-focus: rgba(230, 43, 31, 0.75);
 $link-active: rgba(230, 43, 31, 0.75);
 
-$navbar-height: 5rem;
-$navbar-item-img-max-height: none;
-$navbar-item-hover-background-color: unset;
-$navbar-item-color: white;
 $navbar-item-active-color: rgb(230, 43, 31);
+@import 'bulma';
 body{
     box-sizing: border-box;
+}
+.footer {
+    background-color: #101010;
+    color: white;
+    padding: 3rem 1.5rem 3rem;
+}
+.navbar.is-black .navbar-start > a.navbar-item:hover,
+.navbar.is-black .navbar-start > a.navbar-item.is-active,
+.navbar.is-black .navbar-start .navbar-link:hover,
+.navbar.is-black .navbar-start .navbar-link.is-active,
+.navbar.is-black .navbar-end > a.navbar-item:hover,
+.navbar.is-black .navbar-end > a.navbar-item.is-active,
+.navbar.is-black .navbar-end .navbar-link:hover,
+.navbar.is-black .navbar-end .navbar-link.is-active {
+    color: $link;
 }
