@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body class="about">
+    <nav class="navbar is-black">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                    <img src="<%= require('images/logo.png') %>" alt="logo">
+                </a>
+                <span class="navbar-burger burger" role="button" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div ref="menus" class="navbar-menu" id="navMenu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="/">大会</a>
+                    <a class="navbar-item" href="/team">团队</a>
+                    <a class="navbar-item" href="/join">参与</a>
+                    <a class="navbar-item" href="/about">关于</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="about-xjh-2018">
+        <div class="container">
+            <h1 class="has-text-weight-bold">About<br><span class="tedx">TED<sup>x</sup></span><span class="has-text-weight-normal">Xujiahui</span><br>2018</h1>
+            <div class="columns">
+                <div class="column is-three-fifths desc">
+                    <h2 class="has-text-weight-semibold">大会主题</h2>
+                    <p class="has-text-weight-semibold">伟大的哲学家阿基米德发现浮力定律兴奋的从洗澡池中跳出来的一刻，大喊了一句“ Eureka！我发现了！”</p>
+                    <p class="detail">
+Eureka源于古希腊语，意为恍然大悟。<br>
+在我们的人生里，我们总需要一些灵光乍现的节点去发现去开拓去创造，激发了我们内心的小宇宙。<br>
+可能是某句话，某件事，某个人，成就了不一样的自己，实现了不一样的价值。<br>
+我们相信每一个行动，每一次成功的背后都有这 Eureka moments（灵光乍现的觉醒时刻），追随TEDxXujiahui去探索“觉”的瞬间，大声呼喊， Eureka!
+                    </p>
+                </div>
+                <div class="column">
+                    <figure class="image">
+                        <img src="<%= require('images/jue-dark.jpg') %>">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-xjh">
+        <div class="container">
+            <h2 class="has-text-weight-bold">About<br><span class="tedx">TED<sup>x</sup></span><span class="has-text-weight-normal">Xujiahui</span></h2>
+            <div class="columns">
+                <div class="column is-two-fifths">
+                    <figure class="image">
+                        <img src="<%= require('images/shanghai.jpg') %>">
+                    </figure>
+                </div>
+                <div class="column desc">
+                    <p>
+                        徐家汇是上海中央活动区之一，也是上海十大商业中心之一，徐家汇是一个可以帮助人很好地了解上海的历史、当代和未来的一个地方，人们在咫尺之间往往可以发现大批不同年代、不同风格的建筑物比邻而立。徐家汇的商业改造不断升级，就形成了现在的一个城市副中心。
+                    </p>
+                    <p>
+                        TEDxXujiahui 于18年2月正式获得官方牌照，并为国内少数拥有百人以上大会筹办资格的牌照。团队拥有丰富的策展经验，年轻而充满创造力，我们的理念是期望让每一人的声音都被听见。我们简约而不简单，因为我们有着一个伟大的愿景：让来自中国舞台的声音走向世界。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-ted">
+        <div class="container">
+            <h2 class="has-text-weight-bold">About<br><span class="tedx">TED</span></h2>
+            <p class="desc">
+                TED是一个致力于以传播新思想为宗旨的非营利组织，通常以简短有力的演讲（18分钟或更少）的形式出现。TED成立于1984年，最初以技术（Techonology）、娱乐（Entertainment）和设计（Design）为主题，经过三十余年的发展，话题已涵盖从科学到商业到社会问题等方方面面的全球性大会，语言超过100余种。这里汇聚了全球最新最优秀的思想和技术，包括比尔盖茨、克林顿、杨澜等在内的众多知名科学家，企业家，艺术家等都曾在TED舞台上转播思想。
+            </p>
+            <div>
+                <figure class="image">
+                    <img src="<%= require('images/church.jpg') %>">
+                </figure>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

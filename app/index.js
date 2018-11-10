@@ -3,6 +3,7 @@
  */
 
 // Load application styles
+import 'styles/common.scss'
 import 'bulma'
 import 'animate.css'
 import '@mdi/font/css/materialdesignicons.css'
@@ -16,13 +17,12 @@ import wall4Src from '../assets/images/wall4.png'
 // ================================
 
 const isMobile = window.innerWidth <= 768
-console.log(isMobile)
 if(!isMobile) {
     // 1. create wall element
     const wall1 = document.createElement('IMG')
     const wall2 = document.createElement('IMG')
     const wall3 = document.createElement('IMG')
-    const wall4 = document.createElement('IMG') //classList.add
+    const wall4 = document.createElement('IMG')
     const walls = [wall1, wall2, wall3, wall4]
     wall1.classList.add("wall", "wall1", "is-hidden-mobile")
     wall2.classList.add("wall", "wall2", "is-hidden-mobile")
@@ -47,10 +47,4 @@ if(!isMobile) {
 
 document.querySelector('a.follow').addEventListener('click', ()=>{
     document.querySelector('a.follow ~ figure img').style['opacity'] = 1
-})
-
-document.querySelectorAll('.navs .tabs ul li a').forEach((link) => {
-    link.addEventListener('click', () => {
-        alert('在做了')
-    })
 })

@@ -19,7 +19,8 @@ const appHtmlTitle = 'TEDxXujiahui | 汇聚万智，和而不同'
  */
 module.exports = {
     entry: {
-        bundle: path.join(dirApp, 'index')
+        index: path.join(dirApp, 'index'),
+        about: path.join(dirApp, 'about')
     },
     resolve: { // change where webpack goes to look for imported module
         modules: [ // Tell webpack what directories should be searched when resolving modules
@@ -38,10 +39,18 @@ module.exports = {
              toType: 'dir'
         }]),
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'index.ejs'),
-            title: appHtmlTitle
+            filename: 'about.html',
+            template: path.join(__dirname, 'page/about.ejs'),
+            title: appHtmlTitle,
+            chunks: ['about']
         }),
-        
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: path.join(__dirname, 'page/index.ejs'),
+            title: appHtmlTitle,
+            chunks: ['index']
+        }),
+
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
@@ -49,16 +58,18 @@ module.exports = {
             chunkFilename: "[id].css"
         }),
 
-        new PurifyCSSPlugin({
-            paths: glob.sync([
-                path.join(__dirname, 'app/*.js'),
-                path.join(__dirname, 'index.ejs')
-            ]),
-            minimize: true,
-            purifyOptions: {
-                whitelist: []
-            }
-        })
+        // new PurifyCSSPlugin({
+        //     paths: glob.sync([
+        //         path.join(__dirname, 'app/index.js'),
+        //         path.join(__dirname, 'page/index.ejs'),
+        //         path.join(__dirname, 'app/about.js'),
+        //         path.join(__dirname, 'page/about.ejs')
+        //     ]),
+        //     minimize: true,
+        //     purifyOptions: {
+        //         whitelist: []
+        //     }
+        // })
     ],
     module: {
         rules: [

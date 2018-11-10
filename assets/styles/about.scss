@@ -1,0 +1,76 @@
+html {
+    font-size: 20px;
+}
+body {
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 1152px;
+    width: 1152px;
+}
+section {
+    padding: 3rem 1.5rem;
+}
+h1, .about-xjh h2, .about-ted h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    border-left: 24px solid #ff2b06;
+    padding-left: 10px;
+    .tedx {
+        color: #ff2b06;
+        font-weight: 900;
+    }
+    sup {
+        font-size: 1.5rem;
+        line-height: 0;
+    }
+}
+.about-xjh-2018 {
+    .desc {
+        margin-top: 2rem;
+        margin-left: 40px;
+        h2 {
+            font-size: 1.6rem;
+        }
+        .detail {
+            margin-top: 2rem;
+        }
+    }
+    .image {
+        width: 15rem;
+        margin: 0 auto;
+    }
+}
+
+.about-xjh {
+    .desc {
+        margin-left: 40px;
+        h2 {
+            font-size: 1.6rem;
+        }
+        .detail {
+            margin-top: 2rem;
+        }
+        p:nth-child(2) {
+            margin-top: 2rem;
+        }
+    }
+    .image {
+        width: 15rem;
+        margin: 0 auto;
+    }
+}
+
+.about-ted {
+    .desc {
+        margin-left: 40px;
+    }
+    .image {
+        width: 840px;
+        margin: 0 auto;
+    }
+    .container > div {
+        margin-top: 2rem;
+    }
+}
