@@ -20,7 +20,9 @@ const appHtmlTitle = 'TEDxXujiahui | 汇聚万智，和而不同'
 module.exports = {
     entry: {
         index: path.join(dirApp, 'index'),
-        about: path.join(dirApp, 'about')
+        about: path.join(dirApp, 'about'),
+        team: path.join(dirApp, 'team'),
+        join: path.join(dirApp, 'join')
     },
     resolve: { // change where webpack goes to look for imported module
         modules: [ // Tell webpack what directories should be searched when resolving modules
@@ -41,7 +43,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'about.html',
             template: path.join(__dirname, 'page/about.ejs'),
-            title: appHtmlTitle,
             chunks: ['about']
         }),
         new HtmlWebpackPlugin({
@@ -49,6 +50,16 @@ module.exports = {
             template: path.join(__dirname, 'page/index.ejs'),
             title: appHtmlTitle,
             chunks: ['index']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'team.html',
+            template: path.join(__dirname, 'page/team.ejs'),
+            chunks: ['team']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'join.html',
+            template: path.join(__dirname, 'page/join.ejs'),
+            chunks: ['join']
         }),
 
         new MiniCssExtractPlugin({
@@ -63,7 +74,10 @@ module.exports = {
         //         path.join(__dirname, 'app/index.js'),
         //         path.join(__dirname, 'page/index.ejs'),
         //         path.join(__dirname, 'app/about.js'),
-        //         path.join(__dirname, 'page/about.ejs')
+        //         path.join(__dirname, 'page/about.ejs'),
+        //         path.join(__dirname, 'page/team.ejs'),
+        //         path.join(__dirname, 'page/join.ejs'),
+        //         path.join(__dirname, 'components/*.ejs')
         //     ]),
         //     minimize: true,
         //     purifyOptions: {

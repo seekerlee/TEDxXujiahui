@@ -1,0 +1,28 @@
+body {
+    background-image: url('../images/join-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 0;
+    background-attachment: fixed;
+}
+section.detail {
+    background-color: white;
+    padding-top: 8rem;
+    .container {
+        max-width: 1152px;
+    }
+}
+.join-us {
+    //width: 50%;
+    width: 30rem;
+    max-width: 100%;
+    margin: 5rem auto -8rem auto;
+    background-color: white;
+    h1, h2 {
+        text-align: center;
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}

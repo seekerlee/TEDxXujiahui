@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>参与</title>
+</head>
+<body class="join">
+    <%= require('ejs-loader!../components/nav.ejs')({active: 'join'}) %>
+    <section class="content">
+        <div class="card join-us">
+            <div class="card-content">
+                <h1 class="title">加入我们</h1>
+                <h2 class="subtitle">成为志愿者/讲者/赞助商</h2>
+                <p class="content">我们力求中国区的TEDx视频登上官网，望TEDxXujiahui打造的演讲具有国际水准，展现在Youtube等全球频道，我们严格把控演讲质量，全程提供演讲设计与演讲技能辅导。想获取更多权益信息与合作方案请联系我们。</p>
+            </div>
+        </div>
+    </section>
+    <section class="detail">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <figure class="image">
+                        <img class="" src="<%= require('images/why1.jpg') %>">
+                    </figure>
+                    <h2>成为赞助商</h2>
+                    <p>TEDx徐家汇的演讲⼈人都是各自行业的翘楚，拥有深远广泛的个人影响力。TEDx徐家汇的观众包括现场数以千计高质量观众和全球数十万视频观众。现场观众来自各行业的高管和企业家为主；视频观众是全球年轻的高教育人群，他们也将是未来新一代的思想家和行动家。通过赞助我们的活动，您可以准确定位到各行业精英人群。通过我们一系列的营销活动，这次活动将会在上海本地得到全方⾯面的宣传，除了传统媒体手段外，TEDx徐家汇还将深度挖掘社会媒体的潜力、并对本地相关的一些社区组织进行深度营销，从而扩大活动的影响力，您的企业/组织不仅能通过这次活动得到更多的曝光，您的品牌也能和一个代表国际领袖思想的品牌——TED联系起来。</p>
+                </div>
+                <div class="column">
+                    <figure class="image">
+                        <img class="" src="<%= require('images/why2.jpg') %>">
+                    </figure>
+                    <h2>成为讲者</h2>
+                    <p>TED的讲者拥有广泛个人影响力，TEDx拥有数以千计的高质量观众与全球数，十万视频观众，全方位宣传为您的企业提高足够曝光率</p>
+                </div>
+                <div class="column">
+                    <figure class="image">
+                        <img class="" src="<%= require('images/why3.jpg') %>">
+                    </figure>
+                    <h2>成为志愿者</h2>
+                    <p>成为志愿者，践行传播有价值的思想。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%= require('ejs-loader!../components/footer.ejs')() %>
+</body>
+</html>
