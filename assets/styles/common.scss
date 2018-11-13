@@ -7,6 +7,9 @@ $link-active: rgba(230, 43, 31, 0.75);
 
 $navbar-item-active-color: rgb(230, 43, 31);
 @import 'bulma';
+html {
+    font-size: 20px;
+}
 body{
     box-sizing: border-box;
 }

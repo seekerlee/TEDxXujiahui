@@ -17,7 +17,8 @@
     "@mdi/font": "^2.8.94",
     "animate.css": "^3.7.0",
     "bulma": "^0.7.2",
-    "micromodal": "^0.3.2"
+    "micromodal": "^0.3.2",
+    "siema": "^1.5.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
