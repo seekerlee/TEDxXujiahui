@@ -41,7 +41,7 @@ module.exports = {
              toType: 'dir'
         }]),
         new HtmlWebpackPlugin({
-            filename: 'about.html',
+            filename: 'about',
             template: path.join(__dirname, 'page/about.ejs'),
             chunks: ['about']
         }),
@@ -52,12 +52,12 @@ module.exports = {
             chunks: ['index']
         }),
         new HtmlWebpackPlugin({
-            filename: 'team.html',
+            filename: 'team',
             template: path.join(__dirname, 'page/team.ejs'),
             chunks: ['team']
         }),
         new HtmlWebpackPlugin({
-            filename: 'join.html',
+            filename: 'join',
             template: path.join(__dirname, 'page/join.ejs'),
             chunks: ['join']
         }),
@@ -69,21 +69,21 @@ module.exports = {
             chunkFilename: "[id].css"
         }),
 
-        // new PurifyCSSPlugin({
-        //     paths: glob.sync([
-        //         path.join(__dirname, 'app/index.js'),
-        //         path.join(__dirname, 'page/index.ejs'),
-        //         path.join(__dirname, 'app/about.js'),
-        //         path.join(__dirname, 'page/about.ejs'),
-        //         path.join(__dirname, 'page/team.ejs'),
-        //         path.join(__dirname, 'page/join.ejs'),
-        //         path.join(__dirname, 'components/*.ejs')
-        //     ]),
-        //     minimize: true,
-        //     purifyOptions: {
-        //         whitelist: []
-        //     }
-        // })
+        new PurifyCSSPlugin({
+            paths: glob.sync([
+                path.join(__dirname, 'app/index.js'),
+                path.join(__dirname, 'page/index.ejs'),
+                path.join(__dirname, 'app/about.js'),
+                path.join(__dirname, 'page/about.ejs'),
+                path.join(__dirname, 'page/team.ejs'),
+                path.join(__dirname, 'page/join.ejs'),
+                path.join(__dirname, 'components/*.ejs')
+            ]),
+            minimize: true,
+            purifyOptions: {
+                whitelist: ['*:not*']
+            }
+        })
     ],
     module: {
         rules: [

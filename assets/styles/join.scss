@@ -8,8 +8,13 @@ body {
 section.detail {
     background-color: white;
     padding-top: 8rem;
+    margin-bottom: 3rem;
     .container {
         max-width: 1152px;
+    }
+    h2 {
+        text-align: center;
+        margin: 1rem auto;
     }
 }
 .join-us {
