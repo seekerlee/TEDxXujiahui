@@ -6,16 +6,16 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body class="home">
-    <section class="hero is-fullheight">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1>
-                    <figure class="jue image">
+    <section class="hero">
+        <div class="hero-body vflex flex-shrink1">
+            <div class="container has-text-centered vflex flex-grow1 flex-shrink1">
+                <h1 class="vflex flex-shrink1 flex-grow1">
+                    <figure class="jue flex-grow1 flex-shrink1">
                         <img src="<%= require('images/jue.png') %>">
                     </figure>
-                </h1>
-                <h1 class="title animated fadeInUp delay-1s">
-                    <span>TEDxXujiahui 首场大会<span class="conf-name">《觉·EUREKA》</span></span>
+                    <div class="title animated fadeInUp delay-1s">
+                        <span>TEDxXujiahui 首场大会<span class="conf-name">《觉·EUREKA》</span></span>
+                    </div>
                 </h1>
                 <div class="desc animated fadeInUp delay-1s">
                     <span>2018年12月6日</span>
@@ -24,23 +24,23 @@
                 <div class="animated fadeInUp delay-1s">
                     <a class="follow">关注公众号</a>
                     <a href="http://www.huodongxing.com/go/tedxxujiahui" target="_blank" class="join">购票</a>
-                    <figure class="qr image is-128x128">
+                    <!-- <figure class="qr image is-128x128">
                         <img src="<%= require('images/wechatQR.png') %>">
-                    </figure>
+                    </figure> -->
                 </div>
             </div>
         </div>
-        <div class="navs animated fadeInLeft delay-1s">
+        <div class="navs animated fadeInUp delay-1s">
             <figure class="image logo">
                 <img src="<%= require('images/logo.png') %>">
             </figure>
             <nav class="tabs">
-                <div class="container">
+                <div class="container-ul">
                     <ul>
                         <li class="is-active"><a>大会</a></li>
                         <li><a href="/team">团队</a></li>
                         <!-- <li><a>讲者</a></li> -->
-                        <li><a href="/involve">参与</a></li>
+                        <li><a href="/join">参与</a></li>
                         <li><a href="/about">关于</a></li>
                     </ul>
                 </div>

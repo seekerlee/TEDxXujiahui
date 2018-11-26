@@ -32,7 +32,8 @@ if(!isMobile) {
     wall2.setAttribute('src', wall2Src)
     wall3.setAttribute('src', wall3Src)
     wall4.setAttribute('src', wall4Src)
-    const wallParent = document.querySelector('.home > section')
+    // const wallParent = document.querySelector('.home > section')
+    const wallParent = document.querySelector('body')
     walls.forEach(w => wallParent.appendChild(w))
 
     function wallMove() {
