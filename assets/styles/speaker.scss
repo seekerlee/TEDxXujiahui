@@ -1,0 +1,25 @@
+h1 {
+    margin: 3rem auto 2rem auto;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    border-left: 24px solid #ff2b06;
+    padding-left: 10px;
+    transform: translate(-24px, 0);
+}
+.speakers {
+    .speaker {
+        .card-image figure {
+            overflow: hidden;
+            margin: 0;
+        }
+        .card-image figure img {
+            transition: all linear .4s;
+        }
+        .card-image figure img:hover {
+            transform: scale(1.1);
+        }
+        .content {
+            font-size: .8rem;
+        }
+    }
+}

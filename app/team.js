@@ -16,4 +16,4 @@ const siema = new Siema({
 });
 setInterval(()=>{
     siema.next();
-}, 2000)
+}, 3000)

@@ -1,3 +1,4 @@
+<% const speakers = require('../data/jue.json').speakers %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,6 +9,33 @@
 <body class="speaker">
     <%= require('ejs-loader!../components/nav.ejs')({active: 'speaker'}) %>
     <section class="content">
+        <div class="container">
+            <h1 class="has-text-weight-bold">讲者</h1>
+            <div class="speakers columns is-multiline">
+            <% speakers.forEach( speaker => { %>
+                <div class="column is-one-quarter">
+                    <div class="speaker card">
+                        <div class="card-image">
+                            <figure class="image is-square">
+                                <img src="<%= require('images/speaker-jue/'+ speaker.id +'.jpg') %>" alt="">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4 has-text-centered"><%= speaker.name %></p>
+                                    <p class="subtitle is-6 has-text-centered"><%= speaker.title %></p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <%= speaker.desc %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+            </div>
+        </div>
     </section>
     <%= require('ejs-loader!../components/footer.ejs')() %>
 </body>
