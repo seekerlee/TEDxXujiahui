@@ -29,11 +29,11 @@ h1 {
 }
 @keyframes fadein-jue {
     from {
-        transform: scale(1.1);// translate(0, -3rem);
+        transform: scale(1.1);
         opacity:0;
     }
     to {
-        transform: scale(1); // translate(0, -3rem);
+        transform: scale(1);
         opacity:1;
     }
 }
@@ -69,7 +69,6 @@ h1 {
         background-image: url('../images/jue-bg.png');
         background-repeat: no-repeat;
         background-size: 439px 100%;
-        // background-size: auto 100%;
         background-position-x: center;
     }
     .hero-body {
@@ -117,7 +116,7 @@ h1 {
         }
     }
     .navs {
-        padding: 1rem 1.5rem;// 1rem 1.5rem;
+        padding: 1rem 1.5rem;
         z-index: 10;
         width: 439px;
         max-width: 100%;

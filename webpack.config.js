@@ -22,7 +22,8 @@ module.exports = {
         index: path.join(dirApp, 'index'),
         about: path.join(dirApp, 'about'),
         team: path.join(dirApp, 'team'),
-        join: path.join(dirApp, 'join')
+        join: path.join(dirApp, 'join'),
+        speaker: path.join(dirApp, 'speaker')
     },
     resolve: { // change where webpack goes to look for imported module
         modules: [ // Tell webpack what directories should be searched when resolving modules
@@ -61,6 +62,11 @@ module.exports = {
             template: path.join(__dirname, 'page/join.ejs'),
             chunks: ['join']
         }),
+        new HtmlWebpackPlugin({
+            filename: 'speaker',
+            template: path.join(__dirname, 'page/speaker.ejs'),
+            chunks: ['speaker']
+        }),
 
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
@@ -77,6 +83,7 @@ module.exports = {
                 path.join(__dirname, 'page/about.ejs'),
                 path.join(__dirname, 'page/team.ejs'),
                 path.join(__dirname, 'page/join.ejs'),
+                path.join(__dirname, 'page/speaker.ejs'),
                 path.join(__dirname, 'components/*.ejs')
             ]),
             minimize: true,
