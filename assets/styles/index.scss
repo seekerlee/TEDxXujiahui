@@ -10,6 +10,9 @@ body {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+::-webkit-scrollbar { 
+    display: none; 
+}
 h1 {
     font-size: 2rem;
 }
@@ -141,7 +144,6 @@ h1 {
     .wall {
         display: block;
         position: absolute;
-        // bottom: 0;
         filter: drop-shadow(0 -5px 5px #222);
         transition: all ease 9s;
     }
