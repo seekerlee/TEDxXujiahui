@@ -28,3 +28,6 @@ body{
 .navbar.is-black .navbar-end .navbar-link.is-active {
     color: $link;
 }
+::selection {
+    background: #e62b1e98; /* WebKit/Blink Browsers */
+}

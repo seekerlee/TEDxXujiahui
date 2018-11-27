@@ -23,10 +23,7 @@
                 </div>
                 <div class="animated fadeInUp delay-1s">
                     <a class="follow">关注公众号</a>
-                    <a href="http://www.huodongxing.com/go/tedxxujiahui" target="_blank" class="join">购票</a>
-                    <!-- <figure class="qr image is-128x128">
-                        <img src="<%= require('images/wechatQR.png') %>">
-                    </figure> -->
+                    <a href="http://www.huodongxing.com/go/tedxxujiahui" target="_blank" class="buy animated bounce delay-2s">购票</a>
                 </div>
             </div>
         </div>
@@ -47,5 +44,14 @@
             </nav>
         </div>
     </section>
+    <div class="qrmodal modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <figure class="qr image">
+                <img src="<%= require('images/wechatQR.png') %>" alt="tedxxujiahui qr code">
+            </figure>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
 </body>
 </html>

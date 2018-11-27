@@ -35,7 +35,16 @@ if(!isMobile) {
     // const wallParent = document.querySelector('.home > section')
     const wallParent = document.querySelector('body')
     walls.forEach(w => wallParent.appendChild(w))
-
+    const viewHeight = document.documentElement.clientHeight
+    walls.forEach(w => {
+        w.addEventListener('load', () => {
+            if (w.naturalHeight < viewHeight) {
+                w.classList.add('bottombase')
+            } else {
+                w.classList.add('topbase')
+            }
+        })
+    })
     function wallMove() {
         walls.forEach(w => {
             const r = Math.random() * 80
@@ -46,6 +55,15 @@ if(!isMobile) {
     setInterval(wallMove, 10000)
 }
 
-document.querySelector('a.follow').addEventListener('click', ()=>{
-    document.querySelector('a.follow ~ figure img').style['opacity'] = 1
+// document.querySelector('a.follow').addEventListener('click', ()=>{
+//     document.querySelector('a.follow ~ figure img').style['opacity'] = 1
+// })
+const qr = document.querySelector('.qrmodal')
+document.querySelectorAll('.modal-close, .modal-background', qr).forEach(e => {
+    e.addEventListener('click', () => {
+        qr.classList.toggle("is-active");
+    })
+})
+document.querySelector('a.follow').addEventListener('click', () => {
+    qr.classList.toggle("is-active");
 })

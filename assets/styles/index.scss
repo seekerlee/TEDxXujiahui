@@ -97,7 +97,8 @@ h1 {
                 top: 50%;
             }
         }
-        a.join, a.follow {
+        a.buy, a.follow {
+            display: inline-block;
             text-shadow: 3px 5px 2px #000;
         }
         .qr {
@@ -140,9 +141,15 @@ h1 {
     .wall {
         display: block;
         position: absolute;
-        bottom: 0;
+        // bottom: 0;
         filter: drop-shadow(0 -5px 5px #222);
         transition: all ease 9s;
+    }
+    .wall.bottombase {
+        bottom: 0
+    }
+    .wall.topbase {
+        top: 0;
     }
     .wall1 {
         z-index: 1;
@@ -171,6 +178,16 @@ h1 {
     position: absolute;
     right: 0;
     top: 50%;
+}
+.qrmodal {
+    .modal-content {
+        width: 200px;
+    }
+    .qr.image {
+      height: 200px;
+      width: 200px;
+      margin: 0 auto;
+    }
 }
 @media screen and (max-width: 768px) {
     .home {
