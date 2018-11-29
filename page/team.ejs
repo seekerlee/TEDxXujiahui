@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/png" href="<%= require('images/favicon.png') %>"/>
     <title>团队成员 TEDxXujiahui | 汇聚万智，和而不同</title>
 </head>
 <body class="team">
@@ -10,46 +11,56 @@
     <section class="content1">
         <div class="container">
             <h1 class="has-text-weight-bold">核心团队</h1>
-            <div class="siema">
-                <div class="member">
-                    <figure class="image">
-                        <img class="is-rounded" src="<%= require('images/mmj.jpg') %>">
-                    </figure>
-                    <h2 class="title is-4 has-text-centered">马梦佳</h2>
-                    <p class="subtitle is-6 has-text-centered">持牌策展人</p>
-                    <p>浙江大学本科，上海交通大学硕士，跨国公司、咨询、互联网多领域从业经历，两年欧美工作经历。Toasmaster演讲协会资深会员，曾为TEDxSJTU发起人与策展人。曾受邀参与日内瓦TEDGlobal大会。</p>
+            <div class="speakers columns is-multiline">
+                <div class="column is-one-quarter">
+                    <div class="member">
+                        <figure class="image">
+                            <img class="is-rounded" src="<%= require('images/mmj.jpg') %>">
+                        </figure>
+                        <h2 class="title is-4 has-text-centered">马梦佳</h2>
+                        <p class="subtitle is-6 has-text-centered">持牌策展人 <a href="mailto:mengjia.ma@tedxxujiahui.com" alt="点击打开 email 地址"><span class="mdi mdi-email"></span></a></p>
+                        <p>浙江大学本科，上海交通大学硕士，跨国公司、咨询、互联网多领域从业经历，两年欧美工作经历。Toasmaster演讲协会资深会员，曾为TEDxSJTU发起人与策展人。曾受邀参与日内瓦TEDGlobal大会。</p>
+                    </div>
                 </div>
-                <div class="member">
-                    <figure class="image">
-                        <img class="is-rounded"  src="<%= require('images/adam.jpg') %>">
-                    </figure>
-                    <h2 class="title is-4 has-text-centered">魏彧飞</h2>
-                    <p class="subtitle is-6 has-text-centered">联合策展人</p>
-                    <p>Iowa State University 本科，独立设计师在读，National Geographic青年摄影师，天津文创创业项目发起人。 Toasmaster GTD 演讲协会会员。TEDxSudi 发起人，TEDx 外滩内部运营负责人，前 TEDxLujiazui 成员，hithitme 青年组织成员，东京富士山葡萄科研成员。</p>
+                <div class="column is-one-quarter">
+                    <div class="member">
+                        <figure class="image">
+                            <img class="is-rounded"  src="<%= require('images/adam.jpg') %>">
+                        </figure>
+                        <h2 class="title is-4 has-text-centered">魏彧飞</h2>
+                        <p class="subtitle is-6 has-text-centered">联合策展人 <a href="mailto:adam.wei@tedxxujiahui.com" alt="点击打开 email 地址"><span class="mdi mdi-email"></span></a></p>
+                        <p>Iowa State University 本科，独立设计师在读，National Geographic青年摄影师，天津文创创业项目发起人。 Toasmaster GTD 演讲协会会员。hithitme 青年组织成员，东京富士山葡萄科研成员。</p>
+                    </div>
                 </div>
-                <div class="member">
-                    <figure class="image">
-                        <img class="is-rounded"  src="<%= require('images/yangx.jpg') %>">
-                    </figure>
-                    <h2 class="title is-4 has-text-centered">杨鑫</h2>
-                    <p class="subtitle is-6 has-text-centered">秘书长与首席PPT设计</p>
-                    <p>I核电央企工程师，上海交通大学工学硕士，斜杠青年，10年以上专业PPT设计与授课经验曾受邀为多所高校及企业培训思维导图与职场 PPT 演示设计 hithitme 青年组织成员，东京富士山葡萄科研成员。</p>
+                <div class="column is-one-quarter">
+                    <div class="member">
+                        <figure class="image">
+                            <img class="is-rounded"  src="<%= require('images/yangx.jpg') %>">
+                        </figure>
+                        <h2 class="title is-4 has-text-centered">杨鑫</h2>
+                        <p class="subtitle is-6 has-text-centered">秘书长与首席 PPT 设计 <a href="mailto:tomas.yang@tedxxujiahui.com" alt="点击打开 email 地址"><span class="mdi mdi-email"></span></a></p>
+                        <p>核电央企工程师，上海交通大学工学硕士，斜杠青年，10年以上专业PPT设计与授课经验，曾受邀为多所高校及企业培训思维导图与职场PPT演示设计。</p>
+                    </div>
                 </div>
-                <div class="member">
-                    <figure class="image">
-                        <img class="is-rounded"  src="<%= require('images/caoyifei.jpg') %>">
-                    </figure>
-                    <h2 class="title is-4 has-text-centered">曹一飞</h2>
-                    <p class="subtitle is-6 has-text-centered">首席演讲教练</p>
-                    <p>一位有14年沟通经验的专家，精通于演讲力、沟通谈判、语言逻辑、个人影响力、控场力和舞台表现力等领域的教练式的咨询培训。同时，她还是近百家全球500强企业高管私人演讲教练。</p>
+                <div class="column is-one-quarter">
+                    <div class="member">
+                        <figure class="image">
+                            <img class="is-rounded"  src="<%= require('images/caoyifei.jpg') %>">
+                        </figure>
+                        <h2 class="title is-4 has-text-centered">曹一飞</h2>
+                        <p class="subtitle is-6 has-text-centered">首席演讲教练 <a href="mailto:yifei.cao@tedxxujiahui.com" alt="点击打开 email 地址"><span class="mdi mdi-email"></span></a></p>
+                        <p>一位有14年沟通经验的专家，精通于演讲力、沟通谈判、语言逻辑、个人影响力、控场力和舞台表现力等领域的教练式的咨询培训。同时，她还是近百家全球500强企业高管私人演讲教练。</p>
+                    </div>
                 </div>
-                <div class="member">
-                    <figure class="image">
-                        <img class="is-rounded"  src="<%= require('images/yanni.jpg') %>">
-                    </figure>
-                    <h2 class="title is-4 has-text-centered">燕妮</h2>
-                    <p class="subtitle is-6 has-text-centered">市场品牌总监</p>
-                    <p>市场营销人，译者，业余摄影师。5年市场营销经验，经历媒体，创业公司，跨国外企，练就18般武艺，策划、文案、摄影、设计，曾将 app 推向 app store 首页，也曾主导1000+人活动。</p>
+                <div class="column is-one-quarter">
+                    <div class="member">
+                        <figure class="image">
+                            <img class="is-rounded"  src="<%= require('images/yanni.jpg') %>">
+                        </figure>
+                        <h2 class="title is-4 has-text-centered">燕妮</h2>
+                        <p class="subtitle is-6 has-text-centered">市场品牌总监 <a href="mailto:trista.huang@tedxxujiahui.com" alt="点击打开 email 地址"><span class="mdi mdi-email"></span></a></p>
+                        <p>市场营销人，译者，业余摄影师。5年市场营销经验，经历媒体，创业公司，跨国外企，练就18般武艺，策划、文案、摄影、设计，曾将 app 推向 app store 首页，也曾主导1000+人活动。</p>
+                    </div>
                 </div>
             </div>
         </div>

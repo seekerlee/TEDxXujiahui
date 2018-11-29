@@ -29,3 +29,11 @@ h1 {
         font-size: .8rem;
     }
 }
+a[href^=mailto] {
+    color: black;
+    opacity: .7;
+}
+a[href^=mailto]:hover {
+    color: rgba(255, 231, 147, 1);
+    opacity: 1;
+}
