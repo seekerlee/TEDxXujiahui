@@ -14,6 +14,7 @@ h1 {
         }
         .card-image figure img {
             transition: all linear .4s;
+            filter: grayscale(100%);
         }
         .card-image figure img:hover {
             transform: scale(1.1);
