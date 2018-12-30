@@ -9,6 +9,10 @@ $navbar-item-active-color: rgb(230, 43, 31);
 @import 'bulma';
 html {
     font-size: 20px;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 body{
     box-sizing: border-box;
@@ -17,6 +21,17 @@ body{
     background-color: #101010;
     color: white;
     padding: 3rem 1.5rem 3rem;
+}
+.vflex {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.flex-grow1 {
+    flex-grow: 1;
+}
+.flex-shrink1 {
+    flex-shrink: 1;
 }
 .navbar.is-black .navbar-start > a.navbar-item:hover,
 .navbar.is-black .navbar-start > a.navbar-item.is-active,
