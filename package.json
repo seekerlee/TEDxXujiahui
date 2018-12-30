@@ -1,17 +1,17 @@
 {
-  "name": "webpack-boilerplate",
-  "version": "4.0.0",
-  "description": "Plain webpack 4 Boilerplate with Babel, SASS on board",
-  "author": "Christoph von Gellhorn",
+  "name": "tedxxujiahui.com",
+  "version": "2.0.0",
+  "description": "TEDxXujiahui home page",
+  "author": "Shih Li",
   "license": "MIT",
-  "homepage": "https://github.com/cvgellhorn/webpack-boilerplate",
+  "homepage": "https://github.com/seekerlee/TEDxXujiahui",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
     "build": "webpack -p --progress --mode production --config webpack.config.build.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://cvgellhorn@github.com/cvgellhorn/webpack-boilerplate.git"
+    "url": "https://github.com/seekerlee/TEDxXujiahui.git"
   },
   "dependencies": {
     "@mdi/font": "^2.8.94",
