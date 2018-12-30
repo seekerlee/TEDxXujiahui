@@ -20,6 +20,7 @@ const appHtmlTitle = 'TEDxXujiahui | 汇聚万智，和而不同'
 module.exports = {
     entry: {
         index: path.join(dirApp, 'index'),
+        indexJue: path.join(dirApp, 'index-jue'),
         about: path.join(dirApp, 'about'),
         team: path.join(dirApp, 'team'),
         join: path.join(dirApp, 'join'),
@@ -45,6 +46,12 @@ module.exports = {
             filename: 'about',
             template: path.join(__dirname, 'page/about.ejs'),
             chunks: ['about']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'index-jue.html',
+            template: path.join(__dirname, 'page/index-jue.ejs'),
+            title: appHtmlTitle,
+            chunks: ['indexJue']
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
@@ -79,6 +86,8 @@ module.exports = {
             paths: glob.sync([
                 path.join(__dirname, 'app/index.js'),
                 path.join(__dirname, 'page/index.ejs'),
+                path.join(__dirname, 'app/index-jue.js'),
+                path.join(__dirname, 'page/index-jue.ejs'),
                 path.join(__dirname, 'app/about.js'),
                 path.join(__dirname, 'page/about.ejs'),
                 path.join(__dirname, 'page/team.ejs'),

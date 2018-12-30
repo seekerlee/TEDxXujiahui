@@ -1,0 +1,213 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+h1 {
+    font-size: 2rem;
+}
+.vflex {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.flex-grow1 {
+    flex-grow: 1;
+}
+.flex-shrink1 {
+    flex-shrink: 1;
+}
+@keyframes fadein-jue {
+    from {
+        transform: scale(1.1);
+        opacity:0;
+    }
+    to {
+        transform: scale(1);
+        opacity:1;
+    }
+}
+.home {
+    background-color: #efefef;
+    > section {
+        overflow: hidden;
+    }
+    a {
+        color: #fff;
+    }
+    a:hover {
+        border-bottom-color: #ff2b06;
+        color: #ff2b06;
+    }
+    .tabs li.is-active a {
+        border-bottom-color: #ff2b06;
+        color: #ff2b06;
+    }
+    color: white;
+    h1 {
+        text-shadow: 3px 5px 2px #000;
+        padding: 1rem;
+    }
+    .desc {
+        text-shadow: 3px 5px 2px #000;
+    }
+    .hero {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+        background-image: url('../images/jue-bg.png');
+        background-repeat: no-repeat;
+        background-size: 439px 100%;
+        background-position-x: center;
+    }
+    .hero-body {
+        z-index: 10;
+        .title {
+            color: white;
+            font-size: 2rem;
+            font-weight: normal;
+            margin: 1.5rem auto .5rem auto;
+            .conf-name {
+                display: inline-block;
+            }
+        }
+        .jue {
+            margin: 0 auto;
+            height: auto;
+            max-width: 320px;            
+            filter: drop-shadow(5px 5px 5px #222);
+            animation: fadein-jue 2s;
+            position: relative;
+            img {
+                position: absolute;
+                height: 100%;
+                max-height: 480px;
+                transform: translate(-50%,-50%);
+                min-height: 30px;
+                max-width: unset;
+                top: 50%;
+            }
+        }
+        a.buy, a.follow {
+            display: inline-block;
+            text-shadow: 3px 5px 2px #000;
+        }
+        .qr {
+            left: 50%;
+            transform: translate(-64px, 1rem);
+        }
+        a.follow ~ figure img{
+            transition: all linear 0.2s;
+            opacity: 0;
+        }
+        a.follow:hover ~ figure img{
+            opacity: 1;
+        }
+    }
+    .navs {
+        padding: 1rem 1.5rem;
+        z-index: 10;
+        width: 439px;
+        max-width: 100%;
+        margin: 0 auto;
+        position: relative;
+        .logo {
+            max-width: 257px;
+            margin: 0 auto;
+        }
+        .container-ul {
+            margin: 0 auto;
+        }
+    }
+    .navs:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+    }
+    .wall {
+        display: block;
+        position: absolute;
+        filter: drop-shadow(0 -5px 5px #222);
+        transition: all ease 9s;
+    }
+    .wall.bottombase {
+        bottom: 0
+    }
+    .wall.topbase {
+        top: 0;
+    }
+    .wall1 {
+        z-index: 1;
+        left: 0;
+    }
+    .wall2 {
+        z-index: 2;
+        left: 15%;
+    }
+    .wall3 {
+        z-index: 2;
+        right: 15%;
+    }
+    .wall4 {
+        z-index: 1;
+        right: -100px;
+        bottom: -100px;
+    }
+}
+.home:after {
+    background-image: url('../images/gray-sand.png');
+    background-repeat: repeat;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.qrmodal {
+    .modal-content {
+        width: 200px;
+    }
+    .qr.image {
+      height: 200px;
+      width: 200px;
+      margin: 0 auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .home {
+        .navs {
+            .logo {
+                margin: 0 auto;
+                max-width: 129px;
+            }
+        }
+        .hero-body {
+            .title {
+                font-size: 1.5rem;
+            }
+            > .container {
+                z-index: 1;
+            }
+        }
+    }
+    .home:after {
+        top: 0;
+    }
+}

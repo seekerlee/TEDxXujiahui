@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/png" href="<%= require('images/favicon.png') %>"/>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body class="home">
+    <section class="hero">
+        <div class="hero-body vflex flex-shrink1">
+            <div class="container has-text-centered vflex flex-grow1 flex-shrink1">
+                <h1 class="vflex flex-shrink1 flex-grow1">
+                    <figure class="jue flex-grow1 flex-shrink1">
+                        <img src="<%= require('images/jue.png') %>">
+                    </figure>
+                    <div class="title animated fadeInUp delay-1s">
+                        <span>TEDxXujiahui 首场大会<span class="conf-name">《觉·EUREKA》</span></span>
+                    </div>
+                </h1>
+                <div class="desc animated fadeInUp delay-1s">
+                    <span>2018年12月6日</span>
+                    <a target="_blank" href="http://j.map.baidu.com/S9iA2">徐汇区美罗城5楼上剧场<span class="mdi mdi-map-marker"></span></a>
+                </div>
+                <div class="animated fadeInUp delay-1s">
+                    <a class="follow">关注公众号</a>
+                    <a href="http://www.huodongxing.com/go/tedxxujiahui" target="_blank" class="buy animated bounce delay-2s">购票</a>
+                </div>
+            </div>
+        </div>
+        <div class="navs animated fadeInUp delay-1s">
+            <figure class="image logo">
+                <img src="<%= require('images/logo.png') %>">
+            </figure>
+            <nav class="tabs">
+                <div class="container-ul">
+                    <ul>
+                        <li class="is-active"><a>大会</a></li>
+                        <li><a href="/speaker">讲者</a></li>
+                        <li><a href="/team">团队</a></li>
+                        <li><a href="/join">参与</a></li>
+                        <li><a href="/about">关于</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <div class="qrmodal modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <figure class="qr image">
+                <img src="<%= require('images/wechatQR.png') %>" alt="tedxxujiahui qr code">
+            </figure>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+</body>
+</html>
