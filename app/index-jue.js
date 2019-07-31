@@ -1,5 +1,4 @@
 import 'styles/common.scss'
-import 'bulma'
 import 'animate.css'
 import '@mdi/font/css/materialdesignicons.css'
 import 'styles/index-jue.scss'
