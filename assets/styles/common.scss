@@ -7,6 +7,20 @@ $link-active: rgba(230, 43, 31, 0.75);
 
 $navbar-item-active-color: rgb(230, 43, 31);
 @import 'bulma';
+/* 
+    bulma fix mobile https://github.com/jgthms/bulma/issues/449
+*/
+.columns {
+    margin: 0;
+}
+
+@media screen and (min-width: 1088px) {
+    .columns {
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        margin-top: -0.75rem;
+    }
+}
 html {
     font-size: 20px;
     box-sizing: border-box;
@@ -18,6 +32,7 @@ body{
     box-sizing: border-box;
 }
 .footer {
+    margin-top: 1rem;
     background-color: #101010;
     color: white;
     padding: 3rem 1.5rem 3rem;

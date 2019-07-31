@@ -1,4 +1,4 @@
-h1 {
+h2 {
     margin: 3rem auto 2rem auto;
     font-size: 2rem;
     line-height: 1.9rem;
@@ -6,21 +6,68 @@ h1 {
     padding-left: 10px;
     transform: translate(-24px, 0);
 }
+
+.about-event {
+    .desc {
+        margin-top: 2rem;
+        margin-left: 40px;
+        h2 {
+            font-size: 1.6rem;
+        }
+        .detail {
+            margin-top: 2rem;
+        }
+    }
+    .banner.image {
+        width: 15rem;
+        margin: 0 auto;
+    }
+}
 .speakers {
     .speaker {
+        &:hover {
+            .card-image figure img {
+                transform: scale(1.1);
+            }
+        }
         .card-image figure {
             overflow: hidden;
             margin: 0;
         }
         .card-image figure img {
-            transition: all linear .4s;
+            transition: all ease 1s;
             filter: grayscale(100%);
         }
         .card-image figure img:hover {
             transform: scale(1.1);
         }
-        .content {
-            font-size: .8rem;
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            transition: all ease 1s;
+            .media {
+                flex-shrink: 0;
+            }
+            .content {
+                font-size: .8rem;
+                flex-shrink: 1;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1088px) {
+    .speakers {
+        .speaker {
+            &:hover {
+                .card-content {
+                    max-height: 800px;
+                }
+            }
+            .card-content {
+                max-height: 300px;
+            }
         }
     }
 }
